@@ -1,8 +1,8 @@
 public class arma {
-    private String nom;
-    private tipusarma tipus;
-    private int dany;
-    private boolean magica;
+    protected String nom;
+    protected tipusarma tipus;
+    protected int dany;
+    protected boolean magica;
 
     public arma(String nom, tipusarma tipus, int dany, boolean magica) {
         this.nom = nom;

@@ -10,4 +10,8 @@ public class huma extends personatge {
         this.destresa = Math.max(20, this.destresa + 1);
         this.constitucio = Math.max(20, this.constitucio + 1);
     }
+    @Override
+    public String getRaca() {
+        return "Humà";
+    }
 }

@@ -15,11 +15,11 @@ public class personatge {
     protected double salutMax;
     protected double manaMax;
 
-    private int energia = 0;
-    private boolean habilitatEspecial = false;
-    private arma armaEquipada;
-    private ArrayList<arma> inventari = new ArrayList<>();
-    private boolean defensat = false;
+    protected int energia = 0;
+    protected boolean habilitatEspecial = false;
+    protected arma armaEquipada;
+    protected ArrayList<arma> inventari = new ArrayList<>();
+    protected boolean defensat = false;
 
     public personatge (String nom, int edat, int forca, int destresa, int constitucio, int inteligencia, int saviesa, int carisma) {
         this.nom = nom;
@@ -88,7 +88,7 @@ public class personatge {
     public void rebreDany(double dany) {
 
         if (defensat) {
-            dany /= 2;
+            dany = dany * reduccioDanyDefensa();
             defensat = false;
         }
 
@@ -145,11 +145,19 @@ public class personatge {
     public boolean estaViu() {
     return salut > 0;
     }
+
+    protected double reduccioDanyDefensa() {
+    return 0.5;
+    }
+
+    public String getRaca() {
+        return "Desconeguda";
+    }
     
      public String toString() {
 
-        return nom + " | Vida: " + salut + "/" + salutMax +
-                " | Mana: " + mana + "/" + manaMax +
-                " | Energia: " + energia;
+        return nom + " (" + getRaca() + ") | Vida: " + salut + "/" + salutMax +
+                        " | Mana: " + mana + "/" + manaMax +
+                        " | Energia: " + energia;
     }
 }

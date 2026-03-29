@@ -6,5 +6,16 @@ public class elf extends personatge {
         this.destresa = Math.min(20, this.destresa + 2);
         this.inteligencia = Math.min(20, this.inteligencia + 2);
     }
-    
+    @Override
+    public void regenerarMana(){
+        mana += inteligencia * 3;
+        
+        if (mana > manaMax){
+            mana = manaMax;
+        }
+    }
+    @Override
+    public String getRaca() {
+        return "Elfo";
+    }
 }
