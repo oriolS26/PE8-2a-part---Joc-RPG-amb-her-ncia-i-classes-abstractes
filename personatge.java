@@ -1,19 +1,19 @@
 import java.util.*;
 
 public class personatge {
-
-    private String nom;
-    private int edat;
-    private int forca;
-    private int destresa;
-    private int constitucio;
-    private int inteligencia;
-    private int saviesa;
-    private int carisma;
-    private double salut;
-    private double mana;
-    private double salutMax;
-    private double manaMax;
+    
+    protected String nom;
+    protected int edat;
+    protected int forca;
+    protected int destresa;
+    protected int constitucio;
+    protected int inteligencia;
+    protected int saviesa;
+    protected int carisma;
+    protected double salut;
+    protected double mana;
+    protected double salutMax;
+    protected double manaMax;
 
     private int energia = 0;
     private boolean habilitatEspecial = false;
