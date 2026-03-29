@@ -89,7 +89,32 @@ public class joc {
             }
         }
 
-        personatge p = new personatge(nom, edat, forca, destresa, constitucio, inteligencia, saviesa, carisma);
+        System.out.println("Tria raça:");
+        System.out.println("1. Humà");
+        System.out.println("2. Elf");
+        System.out.println("3. Orc");
+        System.out.println("4. Nan");
+        
+        int raca = sc.nextInt();
+
+        personatge p = null;
+
+        if (raca == 1) {
+            p = new huma(nom, edat, forca, destresa, constitucio, inteligencia, saviesa, carisma);
+        }
+        else if (raca == 2) {
+            p = new elf(nom, edat, forca, destresa, constitucio, inteligencia, saviesa, carisma);
+        }
+        else if (raca == 3) {
+            p = new orc(nom, edat, forca, destresa, constitucio, inteligencia, saviesa, carisma);
+        }
+        else if (raca == 4) {
+            p = new nan(nom, edat, forca, destresa, constitucio, inteligencia, saviesa, carisma);
+        }
+        else {
+            System.out.println("Raça no vàlida");
+            return;
+        }
 
         personatges.add(p);
 
